@@ -13,4 +13,25 @@
 ### - **Icons - react-icons library**
 - using this library because it compiled all the free icons in the net from font awesome to bootstrap icons
 
+## Key Decisions and Optimizations
 
+### - **Card Component for Desktop/Tablet**
+- since its almost the same minus the visit website being below the details, i create this component so that if the admin or client wanted to add another service, he can easily update the array in the data file to add another entry, having a reusable components makes it easier for the client to update the website without having the need of a developer
+
+### - **Card Component for Mobile**
+- i create a different component for mobile for easier troubleshooting and since im using tailwind makes it easier not having a 7 line classes,
+
+### - **Rendering**
+- I used react's hook useState to utilize reacts function to render only a certain part of the page this makes it easier to create the mobile version of the page
+
+### - Popup Implementation
+- I used react's hook useEffect
+
+```javascript
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowpopup(true);
+    },6000)
+
+    return () => clearTimeout(timer);
+  },[])
