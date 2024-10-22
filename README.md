@@ -31,7 +31,28 @@
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowpopup(true);
-    },6000)
+    },5000)
 
     return () => clearTimeout(timer);
   },[])
+```
+- This will count 5 seconds before showing the popup
+
+### - Countdown
+- I used javascript Date and String method to create the countdown effect computing the hours, minutes, seconds left in the timer then
+i used setInterval inside the useEffect to change the value of a state that has the remaining time i used 1000ms for every second it updates
+
+```javascript
+useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        },1000);
+
+        return () => clearInterval(timer);
+    },[Timer]);
+```
+## Run the code
+
+- use this command in the command propmt to start the app
+
+``` npm start ```
