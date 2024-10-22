@@ -56,3 +56,6 @@ useEffect(() => {
 - use this command in the command propmt to start the app
 
 ``` npm start ```
+- or go to this website
+
+```https://vpn-front-two.vercel.app```
